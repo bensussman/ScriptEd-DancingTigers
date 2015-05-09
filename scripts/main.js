@@ -98,7 +98,8 @@ function move(){
         $(this).removeClass('ActivatedNote');
         var currentRow = $(this).attr("data-row");
         if(currentRow !== "6"){
-            $(this).addClass()
+            $(this).next().addClass("ActivatedNote");
+            
         }
     });
     
@@ -106,7 +107,7 @@ function move(){
     if (Math.floor(Math.random() * 10) < 3) {
         //this will happen 30% of the time
         var col = Math.floor(Math.random() * 4) + 1;
-        $(".box.col" + col + "[data-row='1']").addClass("ActivatedNote");
+        $("#col" + col + " .box[data-row='1']").addClass("ActivatedNote");
         
     }
     
