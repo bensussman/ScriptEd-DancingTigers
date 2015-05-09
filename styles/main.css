@@ -108,3 +108,23 @@ h1 {
     from { background-position: 0px 0px; }
     to { background-position: -290px 0px; }
 }
+
+/* hit */
+.hit {
+    -webkit-animation: hit steps(4) 0.5s infinite;
+}
+
+@-webkit-keyframes hit {    
+    from { background-position: 0px 0px; }
+    to { background-position: -290px 0px; }
+}
+
+/* miss */
+.miss {
+    -webkit-animation: miss steps(4) 0.5s infinite;
+}
+
+@-webkit-keyframes miss {    
+    from { background-position: 0px 0px; }
+    to { background-position: -290px 0px; }
+}

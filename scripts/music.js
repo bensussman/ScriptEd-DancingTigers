@@ -26,23 +26,32 @@ function restartTimer(){
 $(function(){
     $('#start').click(function(){
         songs[0].play();
-        startTimer(speeds[0]);
+        shouldPlay = true;
+        advanceClock();
     });
     $('#pause').click(function(){
         songs[0].pause();
-        pauseTimer();
+        shouldPlay = false;
     });
     $('#restart').click(function(){
+        songs[0].pause();
         songs[0].currentTime = 0; 
-        restartTimer();
+        tick = 0;
+        shouldPlay = false;
     });
     
 });
 
 
 var currentSong = songs[0];
+var shouldPlay = false;
 
 function advanceClock() {
+    if (!shouldPlay) {
+        return;
+    }
+    tick++;
+    $("#One").text(tick);
     setTimeout(advanceClock(), getNextSpeed());
 }
 
