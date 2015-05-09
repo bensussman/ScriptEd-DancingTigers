@@ -94,7 +94,13 @@ function move(){
     
     // Shift all existing notes DOWN 1
     // Erase nodes that are now off the grid
-    $('.ActivatedNote').each(function() )
+    $('.ActivatedNote').each(function() {
+        $(this).removeClass('ActivatedNote');
+        var currentRow = $(this).attr("data-row");
+        if(currentRow !== "6"){
+            $(this).addClass()
+        }
+    });
     
     // Create a new note in a random place
     if (Math.floor(Math.random() * 10) < 3) {
