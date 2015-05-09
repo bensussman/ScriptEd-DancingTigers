@@ -1,4 +1,110 @@
-body {
-    background-color:pink;
+.gameboard {
+    
+    width: 500px; 
+    height: 600px; 
+    margin: 0 auto; 
+    overflow: hidden; 
+    position: relative; 
+    z-index: 0; 
+    background-size: contain;
+/*   background-image: url("//i.ytimg.com/vi/JAK5j1UVEQ8/maxresdefault.jpg");*/
+    background-repeat: no-repeat;
 }
 
+h1 {
+    text-align: center;
+}
+
+.row div.col-md-4{
+    float:left;
+    
+}
+
+.col-full-height {
+  height: 70%;
+  vertical-align: middle;
+}
+/*
+.col-md-height {
+  display: table-cell;
+  float: none !important;
+}*/
+
+.finalRow {
+    position: absolute;
+    bottom:0;
+    width:100%;
+    height:15%;
+    
+}
+.box {
+    height:14%;
+}
+/*    position: absolute;
+    bottom: 35px;
+    margin-left: 90px;
+    width: 70px;
+    height: 80px;
+    background-image: url(
+}*/
+
+.drop.box {
+    height: 50px;
+}
+
+
+/*notes*/
+.a_note {
+    
+    background-image: url(http://thumbs.dreamstime.com/z/set-music-notes-black-od-isolated-icons-36135769.jpg);
+}
+.s_note {
+    
+    background-image: url(http://thumbs.dreamstime.com/z/set-music-notes-black-od-isolated-icons-36135769.jpg);
+
+}
+.d_note {
+    
+    background-image: url(http://thumbs.dreamstime.com/z/set-music-notes-black-od-isolated-icons-36135769.jpg);
+
+}
+.f_note {
+    
+    background-image: url(http://thumbs.dreamstime.com/z/set-music-notes-black-od-isolated-icons-36135769.jpg);
+
+}
+
+
+
+/* tiger */
+.tiger {
+    position: absolute;
+    bottom: 35px;
+    margin-left: 90px;
+    width: 75px;
+    height: 50px;
+    background-image: url(http://www.spriters-resource.com/resources/sheets/16/16944.png);
+}
+
+
+
+
+/* stand */
+.stand { 
+    -webkit-animation: stand steps(1) 0.5s infinite;
+}
+
+@-webkit-keyframes stand { 
+    from { background-position: -65px -350px; }
+    to { background-position: -140px -350px; }
+}
+
+/* walk */
+.prowl {
+    -webkit-animation: prowl steps(4) 0.5s infinite;
+}
+
+@-webkit-keyframes prowl {    
+    from { background-position: 0px 0px; }
+    to { background-position: -290px 0px; }
+}
