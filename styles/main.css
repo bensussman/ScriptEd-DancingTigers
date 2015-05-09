@@ -35,6 +35,8 @@ h1 {
 
 .container{
     width:1000px;
+    background-image:url("http://stavestrand.no/cava.gif");
+    background-repeat:repeat;
 }
 
 .finalRow {
