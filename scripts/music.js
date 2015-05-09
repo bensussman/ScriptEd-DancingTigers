@@ -52,32 +52,32 @@ function advanceClock() {
     }
     tick++;
     $("#One").text(tick);
-    setTimeout(advanceClock(), getNextSpeed());
+    setTimeout(advanceClock, getNextSpeed());
 }
 
 function getNextSpeed() {
-    if (currentSong.currentTime < 60)  {
+    if (currentSong.currentTime < 40)  {
         return 1000;
     }
     if (currentSong.currentTime < 120)  {
-        return 750;
-    }
-    if (currentSong.currentTime < 180)  {
         return 500;
     }
+    if (currentSong.currentTime < 180)  {
+        return 1000;
+    }
     if (currentSong.currentTime < 240)  {
-        return 750;
+        return 700;
     }
     if (currentSong.currentTime < 295)  {
         return 1000;
     }
     if (currentSong.currentTime < 355)  {
-        return 1250;
-    }
-    if (currentSong.currentTime < 480)  {
         return 500;
     }
+    if (currentSong.currentTime < 480)  {
+        return 800;
+    }
     if (currentSong.currentTime < 540)  {
-        return 1000;
+        return 1500;
     }
 }
