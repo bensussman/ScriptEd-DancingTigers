@@ -30,39 +30,32 @@ function miss () {
 
 $(document).ready(function(){
     $(document).keypress(keyPressedHandler);
-    startGame();
 });
 
 
 function keyPressedHandler(e) {
+    buttonName = null;
+    
     if (e.keyCode === keyCodeA) {
-        if (true) { //TODO:gamestate
-            SuccessfulTap();
-        } else {
-            FailedTap();
-        }
+        buttonName = "#buttonA";
     }
     else if (e.keyCode === keyCodeS) {
-        if (false) { //TODO:gamestate
-            SuccessfulTap();
-        } else {
-            FailedTap();
-        }
+        buttonName = "#buttonS";
     }
     else if (e.keyCode === keyCodeD) {
-         if (false) { //TODO:gamestate
-            SuccessfulTap();
-        } else {
-            FailedTap();
-        }
+        buttonName = "#buttonD";
         
     }
     else if (e.keyCode === keyCodeF) {
-        if (false) { //TODO:gamestate
-            SuccessfulTap();
-        } else {
-            FailedTap();
-        } 
+        buttonName = "#buttonF";
+    }
+    
+    if ($(buttonName).hasClass("ActivatedNote")) { //TODO:gamestate
+        SuccessfulTap();
+        $(buttonName).addClass("HitNote");
+        $(buttonName).removeClass("ActivateNote");
+    } else {
+        FailedTap();
     }
 }
 
@@ -80,19 +73,9 @@ function FailedTap() {
     $('.misses').text(failedHits);
 }
 
-var intervalToken = null;
-function startGame() {
-    successfulHits = 0;
-    failedHits = 0;
-    var gameSpeed = 100;
-    if (intervalToken) {
-        clearInterval(intervalToken);
-    }
-    intervalToken = setInterval(move,gameSpeed);
-}
 
-function move(){
-    console.log('MOVE happened');
+
+function performMove(){
     // Shift all existing notes DOWN 1
     // Erase nodes that are now off the grid
     $('.ActivatedNote').each(function() {
@@ -103,14 +86,13 @@ function move(){
         }
     });
     
+    $(".HitNote").removeClass("HitNote");
+    
     // Create a new note in a random place
-    if (Math.floor(Math.random() * 10) < 3) {
+    if (Math.floor(Math.random() * 10) < 5) {
         //this will happen 30% of the time
         var col = Math.floor(Math.random() * 4) + 1;
         $("#col" + col + " .box[data-row='1']").addClass("ActivatedNote");
         
     }
-    
-    
-    
 }

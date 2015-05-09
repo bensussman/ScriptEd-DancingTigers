@@ -37,6 +37,8 @@ $(function(){
         songs[0].pause();
         songs[0].currentTime = 0; 
         tick = 0;
+        successfulHits = 0;
+        failedHits = 0;
         shouldPlay = false;
     });
     
@@ -52,7 +54,8 @@ function advanceClock() {
     }
     tick++;
     $("#One").text(tick);
-    setTimeout(advanceClock(), getNextSpeed());
+    setTimeout(advanceClock, getNextSpeed());
+    performMove();
 }
 
 function getNextSpeed() {
