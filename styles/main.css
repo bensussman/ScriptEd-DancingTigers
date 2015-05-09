@@ -33,6 +33,10 @@ h1 {
   float: none !important;
 }*/
 
+.container{
+    width:1000px;
+}
+
 .finalRow {
     position: absolute;
     bottom:0;
