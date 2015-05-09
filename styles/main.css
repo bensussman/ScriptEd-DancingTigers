@@ -131,9 +131,7 @@ h1 {
 
 /* tiger */
 .tiger {
-    position: absolute;
-    bottom: 35px;
-    margin-left: 90px;
+    display: inline-block;
     width: 75px;
     height: 50px;
     background-image: url(http://www.spriters-resource.com/resources/sheets/16/16944.png);
