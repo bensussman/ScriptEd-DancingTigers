@@ -83,6 +83,9 @@ function performMove(){
         var currentRow = $(this).attr("data-row");
         if(currentRow !== "7"){
             $(this).next().addClass("ActivatedNote");
+        } else {
+            FailedTap();
+//            alert('failed tap');
         }
     });
     
