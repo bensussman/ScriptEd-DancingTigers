@@ -98,7 +98,7 @@ function move(){
     $('.ActivatedNote').each(function() {
         $(this).removeClass('ActivatedNote');
         var currentRow = $(this).attr("data-row");
-        if(currentRow !== "6"){
+        if(currentRow !== "7"){
             $(this).next().addClass("ActivatedNote");
         }
     });
