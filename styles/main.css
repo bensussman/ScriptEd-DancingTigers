@@ -44,31 +44,6 @@ h1 {
     border:1px solid blue;
 }
 
-.drop.box {
-    height: 50px;
-}
-
-
-/*notes*/
-.a_note {
-    
-    background-image: url(http://thumbs.dreamstime.com/z/set-music-notes-black-od-isolated-icons-36135769.jpg);
-}
-.s_note {
-    
-    background-image: url(http://thumbs.dreamstime.com/z/set-music-notes-black-od-isolated-icons-36135769.jpg);
-
-}
-.d_note {
-    
-    background-image: url(http://thumbs.dreamstime.com/z/set-music-notes-black-od-isolated-icons-36135769.jpg);
-
-}
-.f_note {
-    
-    background-image: url(http://thumbs.dreamstime.com/z/set-music-notes-black-od-isolated-icons-36135769.jpg);
-
-}
 
 .ActivatedNote {
     background-color:red;
@@ -76,6 +51,74 @@ h1 {
 
 .HitNote {
     background-color:green;
+}
+
+
+.pbtn
+{
+  width: 100px;
+  height: 100px;
+  margin: 0px auto 0px auto;
+  text-align: center;
+  
+  border-radius: 100px / 100px; 
+  
+  background-color:white;
+  box-shadow: 
+    0px -15px 15px white inset,
+    10px -15px 15px white inset,
+    -10px -15px 15px white inset,
+    -0px 15px #000,
+    -35px 40px 5px rgba(0,0,0,0.5);
+  
+  transition: 
+    box-shadow .25s linear,
+    margin-top .25s linear;
+  
+  color: #000;
+  font-size: 50px;
+  
+  padding-top: 0px;
+  line-height: 100px;
+  text-shadow: 3px -3px 1px white, -3px 3px 1px white;
+  transform: scale(1,0.5);
+}
+
+.pbtn.ActivatedNote
+{
+    box-shadow: 
+      0px -15px 15px yellow inset,
+      10px -15px 15px yellow inset,
+      -10px -15px 15px yellow inset,
+      -0px 15px #000,
+      -35px 40px 5px rgba(0,0,0,0.5);
+    text-shadow: 3px -3px 1px yellow, -3px 3px 1px yellow;
+    background-color: yellow;
+}
+
+.pbtn.HitNote
+{
+  box-shadow: 
+    0px -15px 15px green inset,
+    10px -15px 15px green inset,
+    -10px -15px 15px green inset,
+    -0px 2px #F00,
+    -7px 12px 5px rgba(0,0,0,0.5);
+  margin-top: 15px;
+  text-shadow: 3px -3px 1px green, -3px 3px 1px green;
+  background-color:green;
+}
+
+.pbtn.HitFail
+{
+    box-shadow: 
+      0px -15px 15px #F00 inset,
+      10px -15px 15px #F00 inset,
+      -10px -15px 15px #F00 inset,
+      -0px 15px #000,
+      -35px 40px 5px rgba(0,0,0,0.5);
+    text-shadow: 3px -3px 1px #F00, -3px 3px 1px #F00;
+    background-color: #F00;
 }
 
 

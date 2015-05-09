@@ -55,6 +55,7 @@ function keyPressedHandler(e) {
         $(buttonName).addClass("HitNote");
         $(buttonName).removeClass("ActivateNote");
     } else {
+        $(buttonName).addClass("HitFail");
         FailedTap();
     }
 }
@@ -90,6 +91,7 @@ function performMove(){
     });
     
     $(".HitNote").removeClass("HitNote");
+    $(".HitFail").removeClass("HitFail");
     
     // Create a new note in a random place
     if (Math.floor(Math.random() * 10) < 5) {
