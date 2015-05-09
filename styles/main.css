@@ -40,13 +40,9 @@ h1 {
 .box {
     height:14%;
 }
-/*    position: absolute;
-    bottom: 35px;
-    margin-left: 90px;
-    width: 70px;
-    height: 80px;
-    background-image: url(
-}*/
+.finalRow {
+    border:1px solid blue;
+}
 
 .drop.box {
     height: 50px;
